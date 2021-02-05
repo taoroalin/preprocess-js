@@ -5,7 +5,7 @@ const minifyHTML = (text) => {
 }
 
 const minifyCSS = (text) => {
-  return text.replace(/;\s+/, ";").replace(/\{\s+/, "{").replace(/\}\s+/, "}");
+  return text.replace(/(?<=[:;\{\}])\s+/, "");
 }
 
 // unfinished
